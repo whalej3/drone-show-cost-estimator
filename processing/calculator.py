@@ -1,7 +1,7 @@
 import pandas as pd
 
 class FleetCalculator:
-  def _init_(self, data_path):
+  def __init__(self, data_path):
     self.df = pd.read_csv(data_path)
 
   def calculate_proposal(self, desired_drones, region = "North America:, complexity = "3D Animated"):
