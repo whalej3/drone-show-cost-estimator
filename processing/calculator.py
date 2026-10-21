@@ -25,7 +25,7 @@ class FleetCalculator:
     else:
       complexity_multiplier = 1
 
-    drone_cost = desired_drones * per_drone_rate * complexity multiplier
+    drone_cost = desired_drones * per_drone_rate * complexity_multiplier
     total_estimate = drone_cost + logistics
 
     # Space constraints
