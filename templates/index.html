@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Fleet Show Estimator</title>
+    <link rel="stylesheet" href="https://jsdelivr.net">
+</head>
+<body>
+    <h1>🛸 Sitara Skies Drone Show Calculator</h1>
+    <p>Projected Fleet & Financial Proposal Engineering Tool</p>
+    <hr>
+
+    <form method="POST">
+        <label for="drones">Target Drone Count:</label>
+        <input type="number" id="drones" name="drones" min="50" max="400" value="100" required>
+
+        <label for="region">Operational Region:</label>
+        <select id="region" name="region">
+            <option value="North America">North America</option>
+            <option value="Europe">Europe</option>
+        </select>
+
+        <label for="complexity">Design Show Complexity:</label>
+        <select id="complexity" name="complexity">
+            <option value="3D Animated">3D Choreographed Formations</option>
+            <option value="2D Static">2D Basic Shapes</option>
+        </select>
+
+        <button type="submit">Generate Technical Proposal</button>
+    </form>
+
+    {% if proposal %}
+    <div style="margin-top: 30px; padding: 20px; border: 2px solid #005f73; border-radius: 8px;">
+        <h2>📊 Custom Event Proposal Summary</h2>
+        <p><strong>Fleet Staging Size:</strong> {{ proposal.fleet_size }} micro-drones</p>
+        <p><strong>Core Show Cost:</strong> ${{ "{:,.2f}".format(proposal.drone_cost) }}</p>
+        <p><strong>Base Logistics & Permitting Fee:</strong> ${{ "{:,.2f}".format(proposal.logistics_fee) }}</p>
+        <hr>
+        <h3><strong>Estimated Total Price:</strong> ${{ "{:,.2f}".format(proposal.total_price) }}</h3>
+        <p>⚠️ <em>Required Takeoff/Staging Grid Area: Around <strong>{{ proposal.required_takeoff_area_sq_m }} sq. meters</strong> of clear space.</em></p>
+    </div>
+    {% endif %}
+</body>
+</html>
 
