@@ -1,4 +1,4 @@
-region, min_drones, max_drones, avg_cost_per_drone, base_logistics_fee
-North America, 50, 150, 250, 15000
-North America, 151, 400, 220, 25000
-Europe, 50, 200, 210, 12000
+region,min_drones,max_drones,avg_cost_per_drone,base_logistics_fee
+North America,50,150,250,15000
+North America,151,400,220,25000
+Europe,50,200,210,12000
