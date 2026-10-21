@@ -4,7 +4,7 @@ class FleetCalculator:
   def __init__(self, data_path):
     self.df = pd.read_csv(data_path)
 
-  def calculate_proposal(self, desired_drones, region = "North America:, complexity = "3D Animated"):
+  def calculate_proposal(self, desired_drones, region = "North America", complexity = "3D Animated"):
     # Grab operational cost baselines
     regional_mask = self.df['region'] == region
     # Match tiers based on fleet scale bounds
