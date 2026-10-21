@@ -1,8 +1,8 @@
-from flask import Flask, rnder_template, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from processing.calculator import FleetCalculator
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 DATA_PATH = os.path.join('data', 'drone_costs.csv')
 calc = FleetCalculator(DATA_PATH)
 
@@ -19,5 +19,5 @@ def home():
 
   return render_template('index.html', proposal = proposal)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
   app.run(debug = True)
