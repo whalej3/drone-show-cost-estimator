@@ -17,7 +17,7 @@ def home():
 
     proposal = calc.calculate_proposal(drones, region, complexity)
 
-return render_template('index.html', proposal = proposal)
+  return render_template('index.html', proposal = proposal)
 
 if _name_ == '_main_':
   app.run(debug = True)
